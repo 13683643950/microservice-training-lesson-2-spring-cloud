@@ -7,7 +7,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8011/eureka/
   instance:
-    leaseExpirationDurationInSeconds: 20
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 1
+
 server:
   # 如果没有指定PORT或者SERVER_PORT,则选择任意一个可用的端口
   port: ${PORT:${SERVER_PORT:0}}   
